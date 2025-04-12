@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -7,19 +7,32 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: ${({ theme }) => theme.colors.background};
-    color: ${({ theme }) => theme.colors.text};
-    overflow-x: hidden;
-  }
-
   html {
     scroll-behavior: smooth;
   }
 
+  body {
+    font-family: ${({ theme }) => theme.fonts.body};
+    background: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.text};
+    overflow-x: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
+    animation: fadeIn 0.7s ease-in;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
   ::selection {
-    background: ${({ theme }) => theme.colors.primary};
+    background: ${({ theme }) => theme.colors.accent};
     color: white;
   }
-`
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+`;

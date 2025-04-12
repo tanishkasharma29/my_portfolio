@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion'
-import styled from 'styled-components'
-import { FaGithub, FaLinkedin, FaCode } from 'react-icons/fa'
+import { motion } from "framer-motion";
+import styled from "styled-components";
+import { FaGithub, FaLinkedin, FaCode } from "react-icons/fa";
 
 const HeaderContainer = styled.header`
   position: fixed;
@@ -14,19 +14,19 @@ const HeaderContainer = styled.header`
   z-index: 100;
   background: rgba(15, 23, 42, 0.8);
   backdrop-filter: blur(10px);
-`
+`;
 
 const Logo = styled(motion.a)`
   font-size: 1.8rem;
   font-weight: 700;
   color: ${({ theme }) => theme.colors.primary};
   text-decoration: none;
-`
+`;
 
 const NavLinks = styled.div`
   display: flex;
   gap: 2rem;
-`
+`;
 
 const NavLink = styled(motion.a)`
   color: ${({ theme }) => theme.colors.text};
@@ -35,7 +35,7 @@ const NavLink = styled(motion.a)`
   position: relative;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 0;
     height: 2px;
@@ -48,12 +48,12 @@ const NavLink = styled(motion.a)`
   &:hover:after {
     width: 100%;
   }
-`
+`;
 
 const SocialIcons = styled.div`
   display: flex;
   gap: 1.5rem;
-`
+`;
 
 const SocialIcon = styled(motion.a)`
   color: ${({ theme }) => theme.colors.text};
@@ -63,7 +63,7 @@ const SocialIcon = styled(motion.a)`
   &:hover {
     color: ${({ theme }) => theme.colors.primary};
   }
-`
+`;
 
 export default function Header() {
   return (
@@ -78,7 +78,7 @@ export default function Header() {
       </Logo>
 
       <NavLinks>
-        {['Home', 'Skills', 'Projects', 'Contact'].map((item) => (
+        {["Home", "Skills", "Projects", "Contact"].map((item) => (
           <NavLink
             key={item}
             href={`#${item.toLowerCase()}`}
@@ -92,27 +92,38 @@ export default function Header() {
 
       <SocialIcons>
         <SocialIcon
-          href="https://github.com/Shailly-450"
+          href="https://github.com/tanishkasharma29"
           target="_blank"
           whileHover={{ y: -3 }}
+          title="GitHub"
         >
           <FaGithub />
         </SocialIcon>
         <SocialIcon
-          href="https://www.linkedin.com/in/shailly-yadav-60658b288/"
+          href="https://www.linkedin.com/in/tanishka-sharma-a5a883257/"
           target="_blank"
           whileHover={{ y: -3 }}
+          title="LinkedIn"
         >
           <FaLinkedin />
         </SocialIcon>
         <SocialIcon
-          href="https://leetcode.com/u/shailly_tia/"
+          href="https://leetcode.com/u/tanishkasharma_29/"
           target="_blank"
           whileHover={{ y: -3 }}
+          title="LeetCode"
+        >
+          <FaCode />
+        </SocialIcon>
+        <SocialIcon
+          href="https://www.geeksforgeeks.org/user/tanishkappnc/"
+          target="_blank"
+          whileHover={{ y: -3 }}
+          title="GFG"
         >
           <FaCode />
         </SocialIcon>
       </SocialIcons>
     </HeaderContainer>
-  )
+  );
 }
