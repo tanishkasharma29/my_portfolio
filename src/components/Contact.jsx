@@ -1,11 +1,11 @@
-import { motion } from 'framer-motion'
-import styled from 'styled-components'
-import { FaPaperPlane, FaPhone, FaLandmark } from 'react-icons/fa'
+import { motion } from "framer-motion";
+import styled from "styled-components";
+import { FaPaperPlane, FaPhone, FaLandmark } from "react-icons/fa";
 
 const ContactSection = styled.section`
   padding: 5rem 5%;
   background: ${({ theme }) => theme.colors.card};
-`
+`;
 
 const SectionTitle = styled(motion.h2)`
   font-size: 3rem;
@@ -15,7 +15,7 @@ const SectionTitle = styled(motion.h2)`
   position: relative;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -1rem;
     left: 50%;
@@ -25,7 +25,7 @@ const SectionTitle = styled(motion.h2)`
     background: ${({ theme }) => theme.colors.accent};
     border-radius: 2px;
   }
-`
+`;
 
 const ContactContainer = styled.div`
   max-width: 800px;
@@ -37,19 +37,19 @@ const ContactContainer = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     grid-template-columns: 1fr;
   }
-`
+`;
 
 const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-`
+`;
 
 const ContactItem = styled(motion.div)`
   display: flex;
   align-items: center;
   gap: 1rem;
-`
+`;
 
 const ContactIcon = styled.div`
   width: 50px;
@@ -61,7 +61,7 @@ const ContactIcon = styled.div`
   justify-content: center;
   color: white;
   font-size: 1.2rem;
-`
+`;
 
 const ContactText = styled.div`
   h3 {
@@ -79,24 +79,24 @@ const ContactText = styled.div`
       color: ${({ theme }) => theme.colors.primary};
     }
   }
-`
+`;
 
 const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-`
+`;
 
 const FormGroup = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-`
+`;
 
 const FormLabel = styled.label`
   color: ${({ theme }) => theme.colors.text};
   font-weight: 500;
-`
+`;
 
 const FormInput = styled.input`
   padding: 0.8rem 1rem;
@@ -109,7 +109,7 @@ const FormInput = styled.input`
   &:focus {
     outline: 2px solid ${({ theme }) => theme.colors.primary};
   }
-`
+`;
 
 const FormTextarea = styled.textarea`
   padding: 0.8rem 1rem;
@@ -124,7 +124,7 @@ const FormTextarea = styled.textarea`
   &:focus {
     outline: 2px solid ${({ theme }) => theme.colors.primary};
   }
-`
+`;
 
 const SubmitButton = styled(motion.button)`
   padding: 0.8rem 2rem;
@@ -144,7 +144,7 @@ const SubmitButton = styled(motion.button)`
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
   }
-`
+`;
 
 export default function Contact() {
   return (
@@ -170,7 +170,9 @@ export default function Contact() {
             </ContactIcon>
             <ContactText>
               <h3>Email</h3>
-              <a href="mailto:shaillyyadav979@gmail.com">your.email@example.com</a>
+              <a href="mailto:tanishkaratlam@gmail.com">
+                tanishkaratlam@gmail.com
+              </a>
             </ContactText>
           </ContactItem>
 
@@ -185,7 +187,7 @@ export default function Contact() {
             </ContactIcon>
             <ContactText>
               <h3>Phone</h3>
-              <a href="tel:+91-7007051309">+91-7007051309</a>
+              <a href="tel:+91-9424868152">+91-9424868152</a>
             </ContactText>
           </ContactItem>
 
@@ -251,5 +253,5 @@ export default function Contact() {
         </ContactForm>
       </ContactContainer>
     </ContactSection>
-  )
+  );
 }

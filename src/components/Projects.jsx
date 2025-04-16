@@ -1,10 +1,10 @@
-import { motion } from 'framer-motion'
-import styled from 'styled-components'
-import { FiGithub, FiExternalLink } from 'react-icons/fi'
+import { motion } from "framer-motion";
+import styled from "styled-components";
+import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 const ProjectsSection = styled.section`
   padding: 5rem 5%;
-`
+`;
 
 const SectionTitle = styled(motion.h2)`
   font-size: 3rem;
@@ -14,7 +14,7 @@ const SectionTitle = styled(motion.h2)`
   position: relative;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -1rem;
     left: 50%;
@@ -24,7 +24,7 @@ const SectionTitle = styled(motion.h2)`
     background: ${({ theme }) => theme.colors.accent};
     border-radius: 2px;
   }
-`
+`;
 
 const ProjectsGrid = styled.div`
   display: grid;
@@ -32,7 +32,7 @@ const ProjectsGrid = styled.div`
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-`
+`;
 
 const ProjectCard = styled(motion.div)`
   background: ${({ theme }) => theme.colors.card};
@@ -46,29 +46,29 @@ const ProjectCard = styled(motion.div)`
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
-`
+`;
 
 const ProjectContent = styled.div`
   padding: 1.5rem;
-`
+`;
 
 const ProjectTitle = styled.h3`
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: ${({ theme }) => theme.colors.primary};
-`
+`;
 
 const ProjectDescription = styled.p`
   color: ${({ theme }) => theme.colors.secondary};
   margin-bottom: 1rem;
-`
+`;
 
 const ProjectTech = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
-`
+`;
 
 const TechPill = styled.span`
   background: ${({ theme }) => theme.colors.background};
@@ -76,12 +76,12 @@ const TechPill = styled.span`
   padding: 0.3rem 0.8rem;
   border-radius: 50px;
   font-size: 0.8rem;
-`
+`;
 
 const ProjectLinks = styled.div`
   display: flex;
   gap: 1rem;
-`
+`;
 
 const ProjectLink = styled(motion.a)`
   display: flex;
@@ -95,34 +95,42 @@ const ProjectLink = styled(motion.a)`
   &:hover {
     color: ${({ theme }) => theme.colors.primary};
   }
-`
+`;
 
 const projects = [
   {
-    title: 'Text Summarization Web App',
+    title: "Personal Portfolio Website",
     description:
-      'An NLP tool that generates concise versions of longer texts while preserving key information.',
-    tech: ['NLP', 'Machine Learning', 'GitHub Actions', 'Python'],
-    github: 'https://github.com/Shailly-450/Text-Summarizer',
-    live: '#',
+      "A responsive and animated portfolio site showcasing projects and skills.",
+    tech: ["React", "Framer Motion", "Styled Components"],
+    github: "https://github.com/tanishkasharma29/my_portfolio",
+    live: "#",
   },
   {
-    title: 'Object Detection Webapp',
+    title: "Gemini Chatbot (MERN)",
     description:
-      'A YOLOS-based object detection web app with interactive image uploads and visualization.',
-    tech: ['Computer Vision', 'YOLOS', 'Transformers', 'PyTorch', 'Gradio'],
-    github: 'https://huggingface.co/spaces/Shailly29/BCCD_Object_Detection',
-    live: '#',
+      "A Gemini-powered chatbot built using the MERN stack with a clean and functional UI.",
+    tech: ["MongoDB", "Express.js", "React", "Node.js", "Gemini AI"],
+    github: "https://github.com/tanishkasharma29/Gemini-MERN",
+    live: "https://gemini-frontend-89y9.onrender.com/",
   },
   {
-    title: 'Smart ATS: Resume Evaluation Tool',
+    title: "Expense Tracker App",
     description:
-      'A web app using Streamlit and Google Generative AI to evaluate resumes against job descriptions.',
-    tech: ['Streamlit', 'Google Generative AI', 'Data Visualization'],
-    github: 'https://github.com/Shailly-450/Smart-ATS',
-    live: '#',
+      "A full-featured expense tracker for managing and visualizing monthly budgets.",
+    tech: ["React", "Node.js", "MongoDB", "Chart.js"],
+    github: "https://github.com/tanishkasharma29/Expense-Tracker-App",
+    live: "https://expense-tracker-app-2qut.onrender.com",
   },
-]
+  {
+    title: "YouTube Channel Analysis",
+    description:
+      "A Python project to analyze YouTube channel statistics using API integration and data visualization.",
+    tech: ["Python", "YouTube API", "Pandas", "Matplotlib"],
+    github: "https://github.com/tanishkasharma29/YouTube_Analysis_Python",
+    live: "https://youtubevideoanalysiswebapp-vr3vupd8aq3mfappwqf3aye.streamlit.app/",
+  },
+];
 
 export default function Projects() {
   return (
@@ -173,5 +181,5 @@ export default function Projects() {
         ))}
       </ProjectsGrid>
     </ProjectsSection>
-  )
+  );
 }

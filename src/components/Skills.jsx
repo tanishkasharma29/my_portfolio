@@ -1,31 +1,34 @@
-import { motion } from 'framer-motion'
-import styled from 'styled-components'
+import { motion } from "framer-motion";
+import styled from "styled-components";
 import {
   FaJava,
   FaPython,
-  FaGitAlt,
   FaDocker,
   FaLinux,
-} from 'react-icons/fa'
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaNodeJs,
+} from "react-icons/fa";
 import {
+  SiJavascript,
   SiC,
   SiDart,
   SiFlutter,
   SiMysql,
   SiKubernetes,
-  SiFastapi,
   SiFirebase,
-  SiPostman,
-  SiTensorflow,
+  SiMongodb,
+  SiExpress,
   SiNumpy,
   SiPandas,
   SiTableau,
-} from 'react-icons/si'
+} from "react-icons/si";
 
 const SkillsSection = styled.section`
   padding: 5rem 5%;
   background: ${({ theme }) => theme.colors.card};
-`
+`;
 
 const SectionTitle = styled(motion.h2)`
   font-size: 3rem;
@@ -35,7 +38,7 @@ const SectionTitle = styled(motion.h2)`
   position: relative;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -1rem;
     left: 50%;
@@ -45,7 +48,7 @@ const SectionTitle = styled(motion.h2)`
     background: ${({ theme }) => theme.colors.accent};
     border-radius: 2px;
   }
-`
+`;
 
 const SkillsGrid = styled.div`
   display: grid;
@@ -53,7 +56,7 @@ const SkillsGrid = styled.div`
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
-`
+`;
 
 const SkillCard = styled(motion.div)`
   background: ${({ theme }) => theme.colors.background};
@@ -71,37 +74,40 @@ const SkillCard = styled(motion.div)`
     transform: translateY(-5px);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
   }
-`
+`;
 
 const SkillIcon = styled.div`
   font-size: 3rem;
   color: ${({ theme }) => theme.colors.primary};
-`
+`;
 
 const SkillName = styled.h3`
   font-size: 1.2rem;
   color: ${({ theme }) => theme.colors.text};
-`
+`;
 
 const skills = [
-  { name: 'Java', icon: <FaJava />, color: '#007396' },
-  { name: 'C', icon: <SiC />, color: '#A8B9CC' },
-  { name: 'Python', icon: <FaPython />, color: '#3776AB' },
-  { name: 'Dart', icon: <SiDart />, color: '#0175C2' },
-  { name: 'Flutter', icon: <SiFlutter />, color: '#02569B' },
-  { name: 'Git', icon: <FaGitAlt />, color: '#F05032' },
-  { name: 'MySQL', icon: <SiMysql />, color: '#4479A1' },
-  { name: 'Linux', icon: <FaLinux />, color: '#FCC624' },
-  { name: 'Docker', icon: <FaDocker />, color: '#2496ED' },
-  { name: 'Kubernetes', icon: <SiKubernetes />, color: '#326CE5' },
-  { name: 'FastAPI', icon: <SiFastapi />, color: '#009688' },
-  { name: 'Firebase', icon: <SiFirebase />, color: '#FFCA28' },
-  { name: 'Postman', icon: <SiPostman />, color: '#FF6C37' },
-  { name: 'TensorFlow', icon: <SiTensorflow />, color: '#FF6F00' },
-  { name: 'NumPy', icon: <SiNumpy />, color: '#013243' },
-  { name: 'pandas', icon: <SiPandas />, color: '#150458' },
-  { name: 'Tableau', icon: <SiTableau />, color: '#E97627' },
-]
+  { name: "Java", icon: <FaJava />, color: "#007396" },
+  { name: "C", icon: <SiC />, color: "#A8B9CC" },
+  { name: "Python", icon: <FaPython />, color: "#3776AB" },
+  { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
+  { name: "HTML5", icon: <FaHtml5 />, color: "#E34F26" },
+  { name: "CSS3", icon: <FaCss3Alt />, color: "#1572B6" },
+  { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
+  { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
+  { name: "Express.js", icon: <SiExpress />, color: "#000000" },
+  { name: "MongoDB", icon: <SiMongodb />, color: "#47A248" },
+  { name: "Dart", icon: <SiDart />, color: "#0175C2" },
+  { name: "Flutter", icon: <SiFlutter />, color: "#02569B" },
+  { name: "MySQL", icon: <SiMysql />, color: "#4479A1" },
+  { name: "Linux", icon: <FaLinux />, color: "#FCC624" },
+  { name: "Docker", icon: <FaDocker />, color: "#2496ED" },
+  { name: "Kubernetes", icon: <SiKubernetes />, color: "#326CE5" },
+  { name: "Firebase", icon: <SiFirebase />, color: "#FFCA28" },
+  { name: "NumPy", icon: <SiNumpy />, color: "#013243" },
+  { name: "pandas", icon: <SiPandas />, color: "#150458" },
+  { name: "Tableau", icon: <SiTableau />, color: "#E97627" },
+];
 
 export default function Skills() {
   return (
@@ -130,5 +136,5 @@ export default function Skills() {
         ))}
       </SkillsGrid>
     </SkillsSection>
-  )
+  );
 }
