@@ -121,7 +121,7 @@ export default function Hero() {
         </HeroText>
 
         <HeroButton
-          href="Tanishka_Resume_SDE_FaangPath"
+          href="Tanishka_Resume_SDE_FaangPath.pdf"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
